@@ -5,20 +5,20 @@
 class Invenio < Formula
   desc ""
   homepage ""
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/front-matter/invenio/releases/download/v0.1.2/invenio_Darwin_x86_64.tar.gz"
-      sha256 "e94cafe8f60fe533573fe480c7e458d7f7186afb5592eb9a7eea3effc2b4254a"
+      url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Darwin_x86_64.tar.gz"
+      sha256 "7035ad286966fd7ba36e2f3277a8fae9c6220dc8731fefe532f726f37e013936"
 
       def install
         bin.install "invenio"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/front-matter/invenio/releases/download/v0.1.2/invenio_Darwin_arm64.tar.gz"
-      sha256 "94332d8c76217c1903e278f2f78bb42dba06aed9733210f4c90f9e91bc7cf998"
+      url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Darwin_arm64.tar.gz"
+      sha256 "31e77a15b153ea1d19a16c7bcdcc18669a66b1714c004e1e2406529d093bd8c8"
 
       def install
         bin.install "invenio"
@@ -29,8 +29,8 @@ class Invenio < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/front-matter/invenio/releases/download/v0.1.2/invenio_Linux_x86_64.tar.gz"
-        sha256 "f2b1ac139f3da9a6276e2afcf8e86f885a0d805945793c534c86b883453b553f"
+        url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Linux_x86_64.tar.gz"
+        sha256 "d5c22f902c0901622d073d9cd2682ff22811ba1766d0344ecae6c3017f9cd061"
 
         def install
           bin.install "invenio"
@@ -39,8 +39,8 @@ class Invenio < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/front-matter/invenio/releases/download/v0.1.2/invenio_Linux_arm64.tar.gz"
-        sha256 "3918696427d0886bf61ec0651798c8d9f3306092b5597ddca76faf43d10c2f47"
+        url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Linux_arm64.tar.gz"
+        sha256 "e452bc64551ee864f5c5f6a6546189ce1c1a35cbfac1394a8784f06cafbedb1b"
 
         def install
           bin.install "invenio"
