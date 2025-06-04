@@ -1,1 +1,1 @@
-# homebrew-invenio
+# homebrew-inveniordm
