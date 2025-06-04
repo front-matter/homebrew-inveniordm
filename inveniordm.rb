@@ -5,20 +5,20 @@
 class Inveniordm < Formula
   desc ""
   homepage ""
-  version "0.3"
+  version "0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/front-matter/inveniordm/releases/download/v0.3/inveniordm_Darwin_x86_64.tar.gz"
-      sha256 "84dc8b6c77ab0c6e73c9f24225b88c27ed0ba3e88382fe3dbc6e761206d2a181"
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.4/inveniordm_Darwin_x86_64.tar.gz"
+      sha256 "8bce9755cffd10e5d490f9273d2faa62eb333c7696080b283f835955a55252e4"
 
       def install
         bin.install "inveniordm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/front-matter/inveniordm/releases/download/v0.3/inveniordm_Darwin_arm64.tar.gz"
-      sha256 "1c067fc2da901fd13814c61c2c2ea31310251a0fa1dd9623432e137cfe823f54"
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.4/inveniordm_Darwin_arm64.tar.gz"
+      sha256 "1c5c2b423273858219f72a4c52b25be456a915fb555b59d287a592c4e2ef0750"
 
       def install
         bin.install "inveniordm"
@@ -28,15 +28,15 @@ class Inveniordm < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/front-matter/inveniordm/releases/download/v0.3/inveniordm_Linux_x86_64.tar.gz"
-      sha256 "14ec580015775ac2117a70355594f74cdfbe606a3c2d6d81f8f9a00e2ef985fa"
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.4/inveniordm_Linux_x86_64.tar.gz"
+      sha256 "42f1ade5cf5292d2a5b0efb9016dd859349b0658c5a5a9b087a1f9389a49c2b0"
       def install
         bin.install "inveniordm"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/front-matter/inveniordm/releases/download/v0.3/inveniordm_Linux_arm64.tar.gz"
-      sha256 "85eaee1944540d2c6de44fd272b6c7f6e66ff8c1277436e9defa16e18b4a0d94"
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.4/inveniordm_Linux_arm64.tar.gz"
+      sha256 "99ddf56430eff9bf8a9b8272143fb000363443063957ed316efaf606d18ee284"
       def install
         bin.install "inveniordm"
       end
