@@ -5,46 +5,40 @@
 class Invenio < Formula
   desc ""
   homepage ""
-  version "0.1.3"
+  version "0.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Darwin_x86_64.tar.gz"
-      sha256 "7035ad286966fd7ba36e2f3277a8fae9c6220dc8731fefe532f726f37e013936"
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.1/inveniordm_Darwin_x86_64.tar.gz"
+      sha256 "ebd926762c06eacf702709d48af09adde1efc4d81f2081baf74d524bf28448c5"
 
       def install
-        bin.install "invenio"
+        bin.install "inveniordm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Darwin_arm64.tar.gz"
-      sha256 "31e77a15b153ea1d19a16c7bcdcc18669a66b1714c004e1e2406529d093bd8c8"
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.1/inveniordm_Darwin_arm64.tar.gz"
+      sha256 "6b4f25383830033f3158b2f5435ac0adcc4c7b445b62a074d3a2b6d7e49bc3ca"
 
       def install
-        bin.install "invenio"
+        bin.install "inveniordm"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Linux_x86_64.tar.gz"
-        sha256 "d5c22f902c0901622d073d9cd2682ff22811ba1766d0344ecae6c3017f9cd061"
-
-        def install
-          bin.install "invenio"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.1/inveniordm_Linux_x86_64.tar.gz"
+      sha256 "629909589cc4e2211da1ba3835942735a737a76a66d47fd20ad6a569f2228d17"
+      def install
+        bin.install "inveniordm"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/front-matter/invenio/releases/download/v0.1.3/invenio_Linux_arm64.tar.gz"
-        sha256 "e452bc64551ee864f5c5f6a6546189ce1c1a35cbfac1394a8784f06cafbedb1b"
-
-        def install
-          bin.install "invenio"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/front-matter/inveniordm/releases/download/v0.1/inveniordm_Linux_arm64.tar.gz"
+      sha256 "cd482b50e18b5a1b8badea4255ec0f8a662a029e6fb59112d9c2eb5ccc1b5435"
+      def install
+        bin.install "inveniordm"
       end
     end
   end
